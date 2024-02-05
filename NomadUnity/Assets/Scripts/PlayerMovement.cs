@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (rb.velocity.y < -0.1f)
         {
-            // state = MovementState.falling;
+            state = MovementState.falling;
         }
 
         anim.SetInteger("state",(int)state);

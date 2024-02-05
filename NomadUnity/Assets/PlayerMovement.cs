@@ -50,29 +50,29 @@ public class PlayerMovement : MonoBehaviour
         MovementState state;
         if(dirX > 0f) // right
         {
-            // state = MovementState.running;
+            state = MovementState.running;
             sprite.flipX = true;
         }
         else if (dirX < 0f) // left
         {
-            // state = MovementState.running;
+            state = MovementState.running;
             sprite.flipX = false;
         }
         else
         {
-            // state = MovementState.idle;
+            state = MovementState.idle;
         }
 
         if (rb.velocity.y > 0.1f) // technically 0 just unity impriceice 
         {
-            // state = MovementState.jumping;
+            state = MovementState.jumping;
         }
         else if (rb.velocity.y < -0.1f)
         {
             // state = MovementState.falling;
         }
 
-        // anim.SetInteger("state",(int)state);
+        anim.SetInteger("state",(int)state);
     }
 
 
